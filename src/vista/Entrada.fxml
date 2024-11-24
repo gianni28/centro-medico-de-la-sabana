@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: EFF8F8;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.EntradaController">
+   <children>
+      <MenuBar prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #B6EDEF;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Opciones">
+            <items>
+              <MenuItem fx:id="menItemEspecialidades" mnemonicParsing="false" onAction="#goEspecialidades" text="Especialidades" />
+                  <MenuItem fx:id="menItemMedicos" mnemonicParsing="false" onAction="#goMedicos" text="Médicos" />
+                  <MenuItem fx:id="menItemPacientes" mnemonicParsing="false" onAction="#goPacientes" text="Pacientes" />
+                  <MenuItem fx:id="menItemCitas" mnemonicParsing="false" onAction="#goCitas" text="Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Me voy">
+            <items>
+              <MenuItem fx:id="menItemSalir" mnemonicParsing="false" onAction="#doSalir" text="Salir" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <DropShadow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuBar>
+      <Pane fx:id="panImagLogo" layoutX="301.0" layoutY="300.0" prefHeight="100.0" prefWidth="299.0" style="-fx-background-color: #B6EDEF;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="299.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/logoclinica.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <ImageView fitHeight="185.0" fitWidth="278.0" layoutX="312.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/familia.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="190.0" fitWidth="278.0" layoutX="14.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/medicosconhojas.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="314.0" prefHeight="57.0" prefWidth="278.0" style="-fx-border-color: #B6EDEF;" text="Tu salud, nuestra prioridad">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

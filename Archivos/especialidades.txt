@@ -1,0 +1,6 @@
+ESP1357,Fisiatria
+ESP3616,Pediatria
+ESP0000,Cardiologia
+ESP1504,Odontologia
+ESP7409,Microbiologia
+ESP5448,Fisioterapia

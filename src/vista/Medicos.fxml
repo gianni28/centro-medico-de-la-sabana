@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6FDFD;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MedicosController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="376.0" prefWidth="569.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="348.0" prefWidth="121.0" style="-fx-background-color: #EDFAFB; -fx-border-color: #B6EDEF;">
+               <children>
+                  <RadioButton fx:id="radbtnVistaTodos" layoutX="17.0" layoutY="70.0" mnemonicParsing="false" onAction="#goPaneVistaTodos" text="Vista Todos" textFill="#c6d708">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="menu" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="radbtnVistaMed" layoutX="17.0" layoutY="96.0" mnemonicParsing="false" onAction="#goPaneVistaMed" text="Vista Médico" textFill="#c6d708" toggleGroup="$menu" />
+                  <RadioButton fx:id="radbtnRegresar" layoutX="17.0" layoutY="301.0" mnemonicParsing="false" onAction="#backHome" text="Regresar" textFill="RED" toggleGroup="$menu" />
+                  <RadioButton fx:id="radbtnNuevo" layoutX="17.0" layoutY="22.0" mnemonicParsing="false" onAction="#doHabilitarNuevo" text="Nuevo" textFill="#c6d708" toggleGroup="$menu" />
+                  <RadioButton fx:id="radbtnBuscar" layoutX="17.0" layoutY="45.0" mnemonicParsing="false" onAction="#doHabilitatBuscar" text="Buscar" textFill="#c6d708" toggleGroup="$menu" />
+               </children></Pane>
+            <Pane fx:id="paneVistaMed" layoutX="146.0" layoutY="14.0" prefHeight="348.0" prefWidth="408.0" style="-fx-background-color: #EDFAFB; -fx-border-color: #B6EDEF;">
+               <children>
+                  <TextField fx:id="txtIdeMed" layoutX="96.0" layoutY="58.0" />
+                  <TextField fx:id="txtNombreMed" layoutX="96.0" layoutY="93.0" />
+                  <TextField fx:id="txtApellidoMed" layoutX="96.0" layoutY="128.0" />
+                  <TextField fx:id="txtMailMed" layoutX="96.0" layoutY="162.0" />
+                  <TextField fx:id="txtTelefMed" layoutX="96.0" layoutY="198.0" />
+                  <ComboBox fx:id="cbxEspecialidadesMed" layoutX="95.0" layoutY="234.0" prefWidth="150.0" />
+                  <Pane layoutX="263.0" layoutY="58.0" prefHeight="165.0" prefWidth="121.0" style="-fx-border-color: #B6EDEF;">
+                     <children>
+                        <ImageView fx:id="imgFotoMed" fitHeight="134.0" fitWidth="104.0" layoutX="9.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></Pane>
+                  <Label layoutX="14.0" layoutY="58.0" prefHeight="25.0" prefWidth="73.0" style="-fx-border-color: #B6EDEF;" text="Identificación" />
+                  <Label layoutX="14.0" layoutY="93.0" prefHeight="25.0" prefWidth="73.0" style="-fx-border-color: #B6EDEF;" text="Nombre" />
+                  <Label layoutX="14.0" layoutY="128.0" prefHeight="25.0" prefWidth="73.0" style="-fx-border-color: #B6EDEF;" text="Apellido" />
+                  <Label layoutX="14.0" layoutY="162.0" prefHeight="25.0" prefWidth="73.0" style="-fx-border-color: #B6EDEF;" text="eMail" />
+                  <Label layoutX="14.0" layoutY="198.0" prefHeight="25.0" prefWidth="73.0" style="-fx-border-color: #B6EDEF;" text="Telefono" />
+                  <Label layoutX="14.0" layoutY="234.0" prefHeight="25.0" prefWidth="73.0" style="-fx-border-color: #B6EDEF;" text="Especialidad" />
+                  <Button fx:id="btnDisponibilidad" layoutX="71.0" layoutY="293.0" mnemonicParsing="false" onAction="#goDisponibilidad" prefHeight="33.0" prefWidth="138.0" text="Disponibilidad" textFill="#12da30" />
+                  <Button fx:id="btnAgenda" layoutX="213.0" layoutY="293.0" mnemonicParsing="false" onAction="#goAgenda" prefHeight="33.0" prefWidth="114.0" text="Agenda" textFill="#eb05d8" />
+                  <Button fx:id="btnBuscarFoto" layoutX="263.0" layoutY="234.0" mnemonicParsing="false" onAction="#doBuscarFoto" prefHeight="25.0" prefWidth="121.0" text="Buscar Foto" textFill="#ff8c00" />
+                  <Button fx:id="btnEliminarMed" layoutX="263.0" layoutY="17.0" mnemonicParsing="false" onAction="#doEliminarMed" prefHeight="25.0" prefWidth="121.0" text="Eliminar" textFill="RED" />
+                  <Button fx:id="btnModificarMed" layoutX="138.0" layoutY="17.0" mnemonicParsing="false" onAction="#doModificarMed" prefHeight="25.0" prefWidth="121.0" text="Modificar" />
+                  <Button fx:id="btnGuardarMed" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#doGuardarMed" prefHeight="25.0" prefWidth="121.0" text="Guardar" textFill="#0400ff" />
+                  <Button fx:id="btnSiguiente" layoutX="332.0" layoutY="293.0" mnemonicParsing="false" onAction="#doSiguienteMed" prefHeight="33.0" prefWidth="52.0" text="&gt;&gt;" />
+                  <Button fx:id="btnAnterior" layoutX="14.0" layoutY="293.0" mnemonicParsing="false" onAction="#doRegresarMed" prefHeight="33.0" prefWidth="52.0" text="&lt;&lt;" />
+                  <Button fx:id="btnBuscarMed" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#doBuscarMed" prefHeight="25.0" prefWidth="121.0" text="Buscar" textFill="#0400ff" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneVistaTodos" layoutX="146.0" layoutY="14.0" prefHeight="348.0" prefWidth="408.0" style="-fx-background-color: #EDFAFB; -fx-border-color: #B6EDEF;" visible="false">
+               <children>
+                  <ComboBox fx:id="cbxFiltrarEsp" layoutX="87.0" layoutY="22.0" onAction="#doFiltrarEsp" prefHeight="25.0" prefWidth="307.0" />
+                  <TableView fx:id="tblMedicos" layoutX="6.0" layoutY="77.0" prefHeight="264.0" prefWidth="397.0">
+                    <columns>
+                      <TableColumn fx:id="colIdentificacion" prefWidth="90.0" text="Identificación" />
+                      <TableColumn fx:id="colNombre" minWidth="5.0" prefWidth="91.0" text="Nombre" />
+                        <TableColumn fx:id="colApellido" minWidth="5.0" prefWidth="95.0" text="Apellido" />
+                        <TableColumn fx:id="colTelefono" minWidth="2.0" prefWidth="120.0" text="Teléfono" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="22.0" prefHeight="25.0" prefWidth="52.0" style="-fx-border-color: #B6EDEF;" text="Filtrar" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
